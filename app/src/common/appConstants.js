@@ -6,7 +6,7 @@ const appConstants = {
     },
   },
   router: {
-    root: "/emails-app",
+    root: "/emails-app/",
     sendForm: "/emails-app/sendform",
     inbox: "/emails-app/inbox",
     outbox: "/emails-app/outbox",
