@@ -1,0 +1,43 @@
+.Container {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  .MailBox {
+    width: 100%;
+    max-width: 1024px;
+    min-width: 465px;
+    min-height: 100%;
+    position: relative;
+
+    .Header {
+      display: flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      text-transform: capitalize;
+      font-size: 24px;
+      padding: 8px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .Body {
+      overflow: hidden;
+      padding: 8px;
+      position: absolute;
+      top: 50px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+    }
+
+    .NoMails {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

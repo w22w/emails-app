@@ -1,0 +1,39 @@
+.UserRow {
+  display: flex;
+  min-height: 50px;
+  align-items: center;
+  cursor: pointer;
+  padding: 0 16px;
+
+  &:hover {
+    background-color: rgba(99, 99, 99, 0.1);
+  }
+
+  .UserCol {
+    width: 30%;
+
+    .Counter {
+      border-radius: 50%;
+      background-color: rgba(0, 0, 255, 0.5);
+      font-size: 0.8rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      width: 25px;
+      height: 25px;
+      margin-right: 8px;
+      transition: opacity 1s linear;
+
+      &.Invisible {
+        opacity: 0;
+      }
+    }
+
+    &.First {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+}

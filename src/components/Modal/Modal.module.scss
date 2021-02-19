@@ -1,0 +1,118 @@
+.Modal {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  inset: 0;
+
+  .BackDrop {
+    background-color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    inset: 0;
+  }
+
+  .Body {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    max-height: 600px;
+    border-radius: 5px;
+    z-index: 1;
+    position: relative;
+
+    &.AutoHeight {
+      height: auto !important;
+    }
+  }
+
+  .Title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(99, 99, 99, 0.1);
+    position: relative;
+    height: 50px;
+
+    .CloseButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      color: #000;
+      font-weight: bold;
+      height: 25px;
+      width: 25px;
+      right: 16px;
+      top: 12.5px;
+      border-radius: 50%;
+      background-color: #999;
+      cursor: pointer;
+      font-size: 0.5rem;
+
+      &:hover {
+        background-color: #666;
+        color: #fff;
+      }
+
+    }
+  }
+
+  .Content {
+    position: absolute;
+    inset: 0;
+    top: 50px;
+    padding: 16px;
+
+    .Message {
+
+    }
+
+    .ButtonsPanel {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 50px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      .Button {
+        width: 40%;
+        padding: 8px;
+        border: 0;
+        cursor: pointer;
+        border-radius: 5px;
+
+        &.Ok {
+          background-color: #0f0;
+          /*color: #fff;*/
+        }
+
+        &.Cancel {
+          background-color: #666;
+          color: #fff;
+        }
+      }
+    }
+
+    &.ContentAutoHeight {
+      position: relative;
+      inset: unset;
+      top: unset;
+      padding: 0;
+
+      .Message {
+        font-size: 24px;
+        padding: 32px 16px
+      }
+
+      .ButtonsPanel {
+        position: relative;
+      }
+    }
+  }
+}

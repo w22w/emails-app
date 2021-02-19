@@ -1,0 +1,44 @@
+.UserMessage {
+  display: flex;
+  align-items: center;
+
+  &.Inbox {
+    justify-content: flex-start;
+
+    .MessageBox {
+      border: 1px solid rgba(255, 0, 0, 0.5);
+      background-color: rgba(255, 0, 0, 0.1);
+    }
+  }
+
+  &.Outbox {
+    justify-content: flex-end;
+
+    .MessageBox {
+      border: 1px solid rgba(0, 255, 0, 0.5);
+      background-color: rgba(0, 255, 0, 0.1);
+    }
+  }
+
+  &.IsRead {
+    opacity: 0.5;
+  }
+
+  .MessageBox {
+    max-width: 40%;
+
+    border-radius: 20px;
+    padding: 16px;
+    margin: 16px 0;
+
+    .Header {
+      font-weight: bold;
+      margin-bottom: 8px;
+      word-wrap: break-word;
+    }
+
+    .Body {
+      word-wrap: break-word;
+    }
+  }
+}
